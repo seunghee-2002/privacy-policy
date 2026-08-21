@@ -75,27 +75,28 @@
 
 <h2>1. Data yang Dikumpulkan dan Cara Pengumpulannya</h2>
 <p>Gim tidak memiliki pendaftaran maupun login, dan tidak ada akun yang dibuat. Kami tidak mengumpulkan data pribadi yang mengidentifikasi Anda secara langsung, seperti nama, alamat email, atau nomor telepon. Kemajuan permainan dan pengaturan Anda hanya disimpan di perangkat Anda dan tidak pernah dikirim ke server Pengembang.</p>
-<p>Namun, SDK pihak ketiga yang tertanam dalam Gim secara otomatis mengumpulkan data berikut untuk keperluan iklan dan analisis statistik.</p>
+<p>Namun, saat pertama kali dijalankan, Gim membuat ID dukungan acak di dalam perangkat Anda, dan SDK pihak ketiga yang tertanam dalam Gim secara otomatis mengumpulkan data berikut untuk keperluan iklan dan analisis statistik.</p>
 <div class="table-wrap">
 <table>
   <tr><th>Data</th><th>Dikumpulkan oleh</th><th>Cara pengumpulan</th><th>Tujuan</th></tr>
   <tr><td>Pengenal iklan (Android Advertising ID, IDFA iOS)</td><td>LevelPlay dan jaringan iklan yang dimediasi</td><td>Otomatis, saat iklan diminta</td><td>Penayangan iklan, pembatasan frekuensi, pencegahan kecurangan</td></tr>
   <tr><td>Informasi perangkat (model perangkat, versi sistem operasi, platform, pengaturan negara dan bahasa, jenis jaringan)</td><td>LevelPlay, GameAnalytics</td><td>Otomatis, saat Gim dijalankan dan saat iklan diminta</td><td>Penayangan iklan dan analisis statistik</td></tr>
   <tr><td>Alamat IP dan perkiraan lokasi (tingkat negara/wilayah) yang disimpulkan darinya</td><td>LevelPlay dan jaringan iklan yang dimediasi</td><td>Otomatis, saat iklan diminta</td><td>Penayangan iklan yang sesuai wilayah, kepatuhan hukum, pencegahan kecurangan</td></tr>
-  <tr><td>Pengenal anonim</td><td>GameAnalytics</td><td>Dibuat otomatis saat pertama kali dijalankan</td><td>Membedakan pengguna agar statistik tidak terhitung ganda</td></tr>
-  <tr><td>Peristiwa dalam Gim (level dimulai, selesai, dan gagal, mata uang yang diperoleh dan dibelanjakan, iklan yang ditonton, dll.)</td><td>GameAnalytics</td><td>Otomatis, selama Anda bermain</td><td>Analisis statistik penggunaan serta perbaikan tingkat kesulitan dan konten</td></tr>
-  <tr><td>Informasi diagnostik (catatan galat dan kegagalan aplikasi)</td><td>GameAnalytics</td><td>Otomatis, saat terjadi galat</td><td>Menemukan penyebab galat dan meningkatkan kestabilan</td></tr>
+  <tr><td>ID dukungan (pengenal anonim acak)</td><td>Gim (dibuat di dalam perangkat), GameAnalytics</td><td>Dibuat otomatis di dalam perangkat saat Gim pertama kali dijalankan</td><td>Membedakan pengguna dalam analisis statistik (mencegah penghitungan ganda); mengidentifikasi data permainan yang bersangkutan apabila Anda menyertakannya saat mengajukan pertanyaan</td></tr>
+  <tr><td>Catatan penggunaan (tanggal dan waktu akses, jumlah sesi, durasi sesi)</td><td>GameAnalytics</td><td>Otomatis, saat Gim dijalankan dan ditutup</td><td>Analisis statistik penggunaan, seperti retensi pengguna (apakah Anda kembali 1 hari dan 7 hari setelah pemasangan)</td></tr>
+  <tr><td>Peristiwa dalam Gim (level selesai, gagal, dan ditinggalkan di tengah jalan, penggunaan item, iklan yang ditonton, pembelian dalam aplikasi, dll.)</td><td>GameAnalytics</td><td>Otomatis, selama Anda bermain</td><td>Analisis statistik penggunaan serta perbaikan tingkat kesulitan dan konten</td></tr>
   <tr><td>Informasi produk yang dibeli dan tanda terima pembelian</td><td>Penagihan Google Play, penagihan App Store</td><td>Otomatis, saat pembelian dalam aplikasi dilakukan</td><td>Memverifikasi pembelian dan menyerahkan produk</td></tr>
 </table>
 </div>
+<p>ID dukungan tidak terhubung dengan informasi apa pun yang dapat mengidentifikasi Anda, seperti nama atau alamat email, dan dapat dilihat serta disalin melalui menu [Pengaturan] di dalam Gim.</p>
 <p>Gim tidak mengakses izin perangkat yang sensitif seperti kontak, foto, lokasi presisi (GPS), atau mikrofon.</p>
 
 <h2>2. Tujuan Pengumpulan dan Penggunaan</h2>
 <ul>
   <li>Menayangkan iklan interstisial dan iklan berhadiah serta membatasi frekuensi kemunculannya</li>
   <li>Mengukur performa iklan dan mencegah kecurangan terkait iklan</li>
-  <li>Meningkatkan layanan melalui analisis statistik atas permainan</li>
-  <li>Mendiagnosis galat dan meningkatkan kestabilan Gim</li>
+  <li>Meningkatkan layanan melalui analisis statistik penggunaan Gim (seperti retensi pengguna dan tingkat penyelesaian tiap level)</li>
+  <li>Mengidentifikasi data permainan yang bersangkutan saat menangani pertanyaan</li>
   <li>Memverifikasi pembelian dalam aplikasi dan menyerahkan produk yang dibeli</li>
 </ul>
 
@@ -120,7 +121,7 @@
   <tr><th>Kebijakan privasi</th><td><a href="https://gameanalytics.com/privacy/" target="_blank" rel="noopener">https://gameanalytics.com/privacy/</a></td></tr>
   <tr><th>Negara tujuan</th><td>Uni Eropa, Amerika Serikat, dan negara lain tempat penyedia mengoperasikan server</td></tr>
   <tr><th>Waktu dan cara transfer</th><td>Dikirim melalui jaringan selama Anda bermain</td></tr>
-  <tr><th>Data yang ditransfer</th><td>Pengenal anonim, informasi perangkat, peristiwa dalam Gim, informasi diagnostik</td></tr>
+  <tr><th>Data yang ditransfer</th><td>ID dukungan, informasi perangkat, catatan penggunaan, peristiwa dalam Gim</td></tr>
   <tr><th>Tujuan</th><td>Analisis statistik atas permainan dan peningkatan layanan</td></tr>
   <tr><th>Jangka waktu penyimpanan</th><td>Sesuai kebijakan privasi penyedia</td></tr>
 </table>
@@ -148,15 +149,15 @@
 </ul>
 
 <h2>5. Jangka Waktu Penyimpanan</h2>
-<p>Kemajuan permainan dan pengaturan Anda hanya disimpan di perangkat Anda dan terhapus bersama Gim saat Anda menghapus instalasinya. Pengembang tidak menyimpan salinan terpisah dari data ini.</p>
+<p>Kemajuan permainan dan pengaturan Anda hanya disimpan di perangkat Anda dan akan terhapus apabila Anda menjalankan Setel Ulang Data dari menu [Pengaturan] di dalam Gim atau menghapus Gim. Saat Setel Ulang Data dijalankan, ID dukungan baru akan diterbitkan. Pengembang tidak menyimpan salinan terpisah dari data ini.</p>
 <p>Data yang dikumpulkan oleh SDK pihak ketiga disimpan sesuai kebijakan privasi penyedia yang tercantum pada Bagian 3.</p>
 
 <h2 id="data-deletion">6. Hak Anda dan Cara Menggunakannya</h2>
 <ul>
   <li><b>Menarik persetujuan iklan dipersonalisasi:</b> Anda dapat menarik persetujuan atau menolak pelacakan dengan cara yang diuraikan pada Bagian 4.</li>
   <li><b>Menyetel ulang atau menghapus pengenal iklan:</b> Anda dapat menyetel ulang atau menghapus ID iklan kapan saja di pengaturan perangkat — pada Android melalui [Setelan] &gt; [Google] &gt; [Iklan], dan pada iOS melalui [Pengaturan] &gt; [Privasi &amp; Keamanan] &gt; [Pelacakan].</li>
-  <li><b>Menghapus data permainan:</b> menghapus instalasi Gim akan menghapus data permainan yang tersimpan di perangkat Anda. Data ini tidak dapat dipulihkan.</li>
-  <li><b>Permintaan penghapusan dan akses lainnya:</b> jika Anda ingin data yang sudah terkumpul dihapus atau diberitahukan kepada Anda, silakan hubungi alamat email pada Bagian 8. Pengembang akan menindaklanjuti tanpa penundaan setelah memverifikasi permintaan; penghapusan menyeluruh di dalam sistem penyedia pihak ketiga dapat memakan waktu hingga 30 hari.</li>
+  <li><b>Menghapus data permainan:</b> menjalankan Setel Ulang Data dari menu [Pengaturan] di dalam Gim atau menghapus Gim dari perangkat Anda akan menghapus data permainan yang tersimpan. Data ini tidak dapat dipulihkan.</li>
+  <li><b>Permintaan penghapusan dan akses lainnya:</b> jika Anda ingin data yang sudah terkumpul dihapus atau diberitahukan kepada Anda, silakan hubungi alamat email pada Bagian 8. Agar permintaan dapat diverifikasi, mohon sertakan ID dukungan yang ditampilkan pada menu [Pengaturan]. Pengembang akan menindaklanjuti tanpa penundaan setelah memverifikasi permintaan; penghapusan menyeluruh di dalam sistem penyedia pihak ketiga dapat memakan waktu hingga 30 hari.</li>
 </ul>
 
 <h2>7. Privasi Anak</h2>
@@ -173,7 +174,7 @@
 <h2>9. Perubahan Kebijakan Privasi Ini</h2>
 <p>Apabila Kebijakan ini ditambah, dikurangi, atau diubah, perubahan tersebut akan diumumkan pada halaman ini sekurang-kurangnya 7 hari sebelum berlaku.</p>
 
-<p class="meta">Berlaku sejak: 20 Agustus 2026</p>
+<p class="meta">Berlaku sejak: 21 Agustus 2026</p>
 
 <nav class="langbar" aria-label="Language">
   <a href="../../../balance-master/privacy/" data-setlang="ko" hreflang="ko">한국어</a> /

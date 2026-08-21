@@ -75,27 +75,28 @@
 
 <h2>1. Erhobene Daten und Art der Erhebung</h2>
 <p>Das Spiel kennt weder Registrierung noch Anmeldung; es wird kein Konto angelegt. Personenbezogene Daten, die Sie unmittelbar identifizieren – etwa Name, E-Mail-Adresse oder Telefonnummer – werden nicht erhoben. Spielstand und Einstellungen werden ausschließlich auf Ihrem Gerät gespeichert und niemals an Server des Entwicklers übertragen.</p>
-<p>Für Werbung und Statistik erheben die im Spiel eingebundenen SDKs von Drittanbietern jedoch automatisch die folgenden Daten.</p>
+<p>Allerdings erzeugt das Spiel beim ersten Start auf Ihrem Gerät eine zufällige Support-ID, und für Werbung und Statistik erheben die im Spiel eingebundenen SDKs von Drittanbietern automatisch die folgenden Daten.</p>
 <div class="table-wrap">
 <table>
   <tr><th>Daten</th><th>Erhoben durch</th><th>Art der Erhebung</th><th>Zweck</th></tr>
   <tr><td>Werbekennung (Android-Werbe-ID, iOS IDFA)</td><td>LevelPlay und vermittelte Werbenetzwerke</td><td>Automatisch beim Abruf einer Anzeige</td><td>Auslieferung von Anzeigen, Begrenzung der Häufigkeit, Betrugsprävention</td></tr>
   <tr><td>Geräteinformationen (Gerätemodell, Betriebssystemversion, Plattform, Land- und Spracheinstellung, Netzwerktyp)</td><td>LevelPlay, GameAnalytics</td><td>Automatisch beim Start des Spiels und beim Abruf einer Anzeige</td><td>Auslieferung von Anzeigen und statistische Auswertung</td></tr>
   <tr><td>IP-Adresse und der daraus abgeleitete ungefähre Standort (Land-/Regionsebene)</td><td>LevelPlay und vermittelte Werbenetzwerke</td><td>Automatisch beim Abruf einer Anzeige</td><td>Regional passende Anzeigen, Einhaltung gesetzlicher Vorgaben, Betrugsprävention</td></tr>
-  <tr><td>Anonyme Kennung</td><td>GameAnalytics</td><td>Wird beim ersten Start automatisch erzeugt</td><td>Unterscheidung von Nutzern, um Doppelzählungen zu vermeiden</td></tr>
-  <tr><td>Ereignisse im Spiel (Level gestartet, geschafft oder gescheitert, erhaltene und ausgegebene Währung, gesehene Anzeigen usw.)</td><td>GameAnalytics</td><td>Automatisch während des Spielens</td><td>Nutzungsstatistik sowie Verbesserung von Schwierigkeitsgrad und Inhalten</td></tr>
-  <tr><td>Diagnosedaten (Fehler- und Absturzberichte)</td><td>GameAnalytics</td><td>Automatisch beim Auftreten eines Fehlers</td><td>Ursachenanalyse und Verbesserung der Stabilität</td></tr>
+  <tr><td>Support-ID (zufällige anonyme Kennung)</td><td>Spiel (auf dem Gerät erzeugt), GameAnalytics</td><td>Wird beim ersten Start automatisch auf dem Gerät erzeugt</td><td>Unterscheidung von Nutzern in der Statistik (Vermeidung von Doppelzählungen); Zuordnung der betreffenden Spieldaten, wenn Sie die ID einer Anfrage beifügen</td></tr>
+  <tr><td>Nutzungsdaten (Zeitpunkt der Zugriffe, Anzahl der Sitzungen, Sitzungsdauer)</td><td>GameAnalytics</td><td>Automatisch beim Starten und Beenden des Spiels</td><td>Nutzungsstatistik, etwa zur Nutzerbindung (ob Sie 1 Tag und 7 Tage nach der Installation zurückkehren)</td></tr>
+  <tr><td>Ereignisse im Spiel (Level geschafft, gescheitert oder abgebrochen, Verwendung von Gegenständen, gesehene Anzeigen, In-App-Käufe usw.)</td><td>GameAnalytics</td><td>Automatisch während des Spielens</td><td>Nutzungsstatistik sowie Verbesserung von Schwierigkeitsgrad und Inhalten</td></tr>
   <tr><td>Informationen zum gekauften Produkt und Kaufbeleg</td><td>Google Play Billing, App Store Billing</td><td>Automatisch bei einem In-App-Kauf</td><td>Prüfung des Kaufs und Bereitstellung des Produkts</td></tr>
 </table>
 </div>
+<p>Die Support-ID ist mit keinen Daten verknüpft, die Sie identifizieren könnten, etwa Ihrem Namen oder Ihrer E-Mail-Adresse. Sie können sie im Spiel im Menü [Einstellungen] einsehen und kopieren.</p>
 <p>Das Spiel greift nicht auf sensible Geräteberechtigungen wie Kontakte, Fotos, den genauen Standort (GPS) oder das Mikrofon zu.</p>
 
 <h2>2. Zwecke der Erhebung und Verwendung</h2>
 <ul>
   <li>Auslieferung von Interstitial- und Rewarded-Anzeigen sowie Begrenzung ihrer Häufigkeit</li>
   <li>Messung der Werbeleistung und Verhinderung von Werbebetrug</li>
-  <li>Verbesserung des Dienstes durch statistische Auswertung des Spielverhaltens</li>
-  <li>Fehlerdiagnose und Verbesserung der Stabilität des Spiels</li>
+  <li>Verbesserung des Dienstes durch statistische Auswertung des Spielverhaltens (etwa Nutzerbindung und Erfolgsquote je Level)</li>
+  <li>Zuordnung der betreffenden Spieldaten bei der Bearbeitung einer Anfrage</li>
   <li>Prüfung von In-App-Käufen und Bereitstellung der gekauften Produkte</li>
 </ul>
 
@@ -120,7 +121,7 @@
   <tr><th>Datenschutzerklärung</th><td><a href="https://gameanalytics.com/privacy/" target="_blank" rel="noopener">https://gameanalytics.com/privacy/</a></td></tr>
   <tr><th>Zielländer</th><td>Europäische Union, Vereinigte Staaten und weitere Länder, in denen der Anbieter Server betreibt</td></tr>
   <tr><th>Zeitpunkt und Art der Übermittlung</th><td>Übertragung über das Netzwerk während des Spielens</td></tr>
-  <tr><th>Übermittelte Daten</th><td>Anonyme Kennung, Geräteinformationen, Ereignisse im Spiel, Diagnosedaten</td></tr>
+  <tr><th>Übermittelte Daten</th><td>Support-ID, Geräteinformationen, Nutzungsdaten, Ereignisse im Spiel</td></tr>
   <tr><th>Zweck</th><td>Statistische Auswertung des Spielverhaltens und Verbesserung des Dienstes</td></tr>
   <tr><th>Speicherdauer</th><td>Gemäß der Datenschutzerklärung des Anbieters</td></tr>
 </table>
@@ -148,15 +149,15 @@
 </ul>
 
 <h2>5. Speicherdauer</h2>
-<p>Spielstand und Einstellungen werden ausschließlich auf Ihrem Gerät gespeichert und mit der Deinstallation des Spiels gelöscht. Der Entwickler bewahrt keine separate Kopie dieser Daten auf.</p>
+<p>Spielstand und Einstellungen werden ausschließlich auf Ihrem Gerät gespeichert und gelöscht, wenn Sie im Spiel im Menü [Einstellungen] „Daten zurücksetzen" ausführen oder das Spiel deinstallieren. Beim Zurücksetzen der Daten wird eine neue Support-ID vergeben. Der Entwickler bewahrt keine separate Kopie dieser Daten auf.</p>
 <p>Für die von SDKs Dritter erhobenen Daten gelten die Speicherfristen der in Abschnitt 3 genannten Anbieter.</p>
 
 <h2 id="data-deletion">6. Ihre Rechte und deren Ausübung</h2>
 <ul>
   <li><b>Widerruf der Einwilligung in personalisierte Werbung:</b> Sie können Ihre Einwilligung widerrufen oder Tracking ablehnen, wie in Abschnitt 4 beschrieben.</li>
   <li><b>Werbekennung zurücksetzen oder löschen:</b> Sie können Ihre Werbe-ID jederzeit in den Geräteeinstellungen zurücksetzen oder löschen – unter Android über [Einstellungen] &gt; [Google] &gt; [Werbung], unter iOS über [Einstellungen] &gt; [Datenschutz &amp; Sicherheit] &gt; [Tracking].</li>
-  <li><b>Löschen der Spieldaten:</b> Mit der Deinstallation des Spiels werden die auf Ihrem Gerät gespeicherten Spieldaten gelöscht. Diese Daten lassen sich nicht wiederherstellen.</li>
-  <li><b>Sonstige Lösch- und Auskunftsersuchen:</b> Möchten Sie bereits erhobene Daten löschen lassen oder Auskunft darüber erhalten, wenden Sie sich bitte an die in Abschnitt 8 genannte E-Mail-Adresse. Der Entwickler bearbeitet Ihr Anliegen nach Prüfung unverzüglich; die vollständige Löschung in den Systemen eines Drittanbieters kann bis zu 30 Tage dauern.</li>
+  <li><b>Löschen der Spieldaten:</b> Wenn Sie im Spiel im Menü [Einstellungen] „Daten zurücksetzen" ausführen oder das Spiel von Ihrem Gerät deinstallieren, werden die gespeicherten Spieldaten gelöscht. Diese Daten lassen sich nicht wiederherstellen.</li>
+  <li><b>Sonstige Lösch- und Auskunftsersuchen:</b> Möchten Sie bereits erhobene Daten löschen lassen oder Auskunft darüber erhalten, wenden Sie sich bitte an die in Abschnitt 8 genannte E-Mail-Adresse. Zur Prüfung Ihres Anliegens geben Sie bitte die im Menü [Einstellungen] angezeigte Support-ID mit an. Der Entwickler bearbeitet Ihr Anliegen nach Prüfung unverzüglich; die vollständige Löschung in den Systemen eines Drittanbieters kann bis zu 30 Tage dauern.</li>
 </ul>
 
 <h2>7. Daten von Kindern</h2>
@@ -173,7 +174,7 @@
 <h2>9. Änderungen dieser Datenschutzerklärung</h2>
 <p>Wird diese Erklärung ergänzt, gekürzt oder geändert, werden die Änderungen mindestens 7 Tage vor ihrem Inkrafttreten auf dieser Seite bekannt gegeben.</p>
 
-<p class="meta">Gültig ab: 20. August 2026</p>
+<p class="meta">Gültig ab: 21. August 2026</p>
 
 <nav class="langbar" aria-label="Language">
   <a href="../../../balance-master/privacy/" data-setlang="ko" hreflang="ko">한국어</a> /

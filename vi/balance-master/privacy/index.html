@@ -75,27 +75,28 @@
 
 <h2>1. Dữ liệu Thu thập và Cách thức Thu thập</h2>
 <p>Trò chơi không có bước đăng ký hay đăng nhập và không tạo tài khoản. Chúng tôi không thu thập dữ liệu cá nhân nhận dạng trực tiếp bạn, chẳng hạn như họ tên, địa chỉ email hay số điện thoại. Tiến trình chơi và các thiết lập chỉ được lưu trên thiết bị của bạn và không bao giờ được truyền tới máy chủ của Nhà phát triển.</p>
-<p>Tuy nhiên, các SDK của bên thứ ba được tích hợp trong Trò chơi tự động thu thập những dữ liệu sau nhằm mục đích quảng cáo và phân tích thống kê.</p>
+<p>Tuy nhiên, khi khởi chạy lần đầu, Trò chơi tạo ngẫu nhiên một ID hỗ trợ ngay trên thiết bị của bạn, và các SDK của bên thứ ba được tích hợp trong Trò chơi tự động thu thập những dữ liệu sau nhằm mục đích quảng cáo và phân tích thống kê.</p>
 <div class="table-wrap">
 <table>
   <tr><th>Dữ liệu</th><th>Bên thu thập</th><th>Cách thức thu thập</th><th>Mục đích</th></tr>
   <tr><td>Mã định danh quảng cáo (Advertising ID của Android, IDFA của iOS)</td><td>LevelPlay và các mạng quảng cáo được trung gian hóa</td><td>Tự động, khi có yêu cầu hiển thị quảng cáo</td><td>Phân phối quảng cáo, giới hạn tần suất, phòng chống gian lận</td></tr>
   <tr><td>Thông tin thiết bị (kiểu máy, phiên bản hệ điều hành, nền tảng, thiết lập quốc gia và ngôn ngữ, loại kết nối mạng)</td><td>LevelPlay, GameAnalytics</td><td>Tự động, khi khởi động Trò chơi và khi yêu cầu quảng cáo</td><td>Phân phối quảng cáo và phân tích thống kê</td></tr>
   <tr><td>Địa chỉ IP và vị trí gần đúng (ở cấp quốc gia/khu vực) được suy ra từ đó</td><td>LevelPlay và các mạng quảng cáo được trung gian hóa</td><td>Tự động, khi có yêu cầu hiển thị quảng cáo</td><td>Phân phối quảng cáo phù hợp khu vực, tuân thủ pháp luật, phòng chống gian lận</td></tr>
-  <tr><td>Mã định danh ẩn danh</td><td>GameAnalytics</td><td>Được tạo tự động khi khởi chạy lần đầu</td><td>Phân biệt người dùng để tránh đếm trùng trong thống kê</td></tr>
-  <tr><td>Sự kiện trong Trò chơi (bắt đầu, hoàn thành và thất bại màn chơi, tiền tệ nhận và tiêu, quảng cáo đã xem, v.v.)</td><td>GameAnalytics</td><td>Tự động, trong quá trình chơi</td><td>Phân tích thống kê mức độ sử dụng và cải thiện độ khó, nội dung</td></tr>
-  <tr><td>Thông tin chẩn đoán (bản ghi lỗi và sự cố treo ứng dụng)</td><td>GameAnalytics</td><td>Tự động, khi xảy ra lỗi</td><td>Xác định nguyên nhân lỗi và nâng cao độ ổn định</td></tr>
+  <tr><td>ID hỗ trợ (mã định danh ẩn danh ngẫu nhiên)</td><td>Trò chơi (tạo trên thiết bị), GameAnalytics</td><td>Được tạo tự động trên thiết bị khi khởi chạy lần đầu</td><td>Phân biệt người dùng trong thống kê (tránh đếm trùng); xác định dữ liệu trò chơi liên quan khi bạn gửi kèm ID này trong yêu cầu hỗ trợ</td></tr>
+  <tr><td>Lịch sử sử dụng (ngày giờ truy cập, số lần truy cập, độ dài phiên chơi)</td><td>GameAnalytics</td><td>Tự động, khi khởi động và khi thoát Trò chơi</td><td>Phân tích thống kê mức độ sử dụng, chẳng hạn tỷ lệ giữ chân người dùng (việc quay lại sau 1 ngày và 7 ngày kể từ khi cài đặt)</td></tr>
+  <tr><td>Sự kiện trong Trò chơi (hoàn thành, thất bại và thoát giữa chừng màn chơi, sử dụng vật phẩm, quảng cáo đã xem, mua hàng trong ứng dụng, v.v.)</td><td>GameAnalytics</td><td>Tự động, trong quá trình chơi</td><td>Phân tích thống kê mức độ sử dụng và cải thiện độ khó, nội dung</td></tr>
   <tr><td>Thông tin sản phẩm đã mua và biên nhận mua hàng</td><td>Thanh toán Google Play, thanh toán App Store</td><td>Tự động, khi thực hiện mua hàng trong ứng dụng</td><td>Xác minh giao dịch và cấp phát sản phẩm</td></tr>
 </table>
 </div>
+<p>ID hỗ trợ không được liên kết với bất kỳ dữ liệu nào có thể nhận dạng bạn, chẳng hạn như họ tên hay địa chỉ email, và bạn có thể xem cũng như sao chép ID này trong menu [Cài đặt] của Trò chơi.</p>
 <p>Trò chơi không truy cập các quyền nhạy cảm của thiết bị như danh bạ, ảnh, vị trí chính xác (GPS) hay micrô.</p>
 
 <h2>2. Mục đích Thu thập và Sử dụng</h2>
 <ul>
   <li>Hiển thị quảng cáo xen kẽ và quảng cáo có thưởng, đồng thời giới hạn tần suất xuất hiện</li>
   <li>Đo lường hiệu quả quảng cáo và ngăn chặn gian lận liên quan đến quảng cáo</li>
-  <li>Cải thiện dịch vụ thông qua phân tích thống kê quá trình chơi</li>
-  <li>Chẩn đoán lỗi và nâng cao độ ổn định của Trò chơi</li>
+  <li>Cải thiện dịch vụ thông qua phân tích thống kê quá trình chơi (tỷ lệ giữ chân người dùng, tỷ lệ hoàn thành từng màn chơi, v.v.)</li>
+  <li>Xác định dữ liệu trò chơi liên quan khi tiếp nhận yêu cầu hỗ trợ</li>
   <li>Xác minh giao dịch mua trong ứng dụng và cấp phát sản phẩm đã mua</li>
 </ul>
 
@@ -120,7 +121,7 @@
   <tr><th>Chính sách quyền riêng tư</th><td><a href="https://gameanalytics.com/privacy/" target="_blank" rel="noopener">https://gameanalytics.com/privacy/</a></td></tr>
   <tr><th>Quốc gia tiếp nhận</th><td>Liên minh châu Âu, Hoa Kỳ và các quốc gia khác nơi nhà cung cấp đặt máy chủ</td></tr>
   <tr><th>Thời điểm và phương thức chuyển</th><td>Được truyền qua mạng trong quá trình chơi</td></tr>
-  <tr><th>Dữ liệu được chuyển</th><td>Mã định danh ẩn danh, thông tin thiết bị, sự kiện trong Trò chơi, thông tin chẩn đoán</td></tr>
+  <tr><th>Dữ liệu được chuyển</th><td>ID hỗ trợ, thông tin thiết bị, lịch sử sử dụng, sự kiện trong Trò chơi</td></tr>
   <tr><th>Mục đích</th><td>Phân tích thống kê quá trình chơi và cải thiện dịch vụ</td></tr>
   <tr><th>Thời gian lưu trữ</th><td>Theo chính sách quyền riêng tư của nhà cung cấp</td></tr>
 </table>
@@ -148,15 +149,15 @@
 </ul>
 
 <h2>5. Thời gian Lưu trữ</h2>
-<p>Tiến trình chơi và các thiết lập chỉ được lưu trên thiết bị của bạn và sẽ bị xóa cùng với Trò chơi khi bạn gỡ cài đặt. Nhà phát triển không giữ bản sao riêng của dữ liệu này.</p>
+<p>Tiến trình chơi và các thiết lập chỉ được lưu trên thiết bị của bạn và sẽ bị xóa khi bạn thực hiện Đặt lại dữ liệu trong menu [Cài đặt] của Trò chơi hoặc gỡ cài đặt Trò chơi. Khi Đặt lại dữ liệu, một ID hỗ trợ mới sẽ được cấp. Nhà phát triển không giữ bản sao riêng của dữ liệu này.</p>
 <p>Dữ liệu do các SDK của bên thứ ba thu thập được lưu trữ theo chính sách quyền riêng tư của các nhà cung cấp nêu tại Mục 3.</p>
 
 <h2 id="data-deletion">6. Quyền của Bạn và Cách Thực hiện</h2>
 <ul>
   <li><b>Rút lại sự đồng ý với quảng cáo cá nhân hóa:</b> bạn có thể rút lại sự đồng ý hoặc từ chối theo dõi theo cách nêu tại Mục 4.</li>
   <li><b>Đặt lại hoặc xóa mã định danh quảng cáo:</b> bạn có thể đặt lại hoặc xóa Advertising ID bất cứ lúc nào trong phần cài đặt thiết bị — trên Android tại [Cài đặt] &gt; [Google] &gt; [Quảng cáo], và trên iOS tại [Cài đặt] &gt; [Quyền riêng tư &amp; Bảo mật] &gt; [Theo dõi].</li>
-  <li><b>Xóa dữ liệu trò chơi:</b> gỡ cài đặt Trò chơi sẽ xóa dữ liệu được lưu trên thiết bị của bạn. Dữ liệu này không thể khôi phục.</li>
-  <li><b>Các yêu cầu xóa và truy cập khác:</b> nếu bạn muốn xóa hoặc được cung cấp dữ liệu đã thu thập, vui lòng liên hệ địa chỉ email tại Mục 8. Nhà phát triển sẽ xử lý không chậm trễ sau khi xác minh yêu cầu; việc xóa hoàn toàn trong hệ thống của nhà cung cấp bên thứ ba có thể mất tới 30 ngày.</li>
+  <li><b>Xóa dữ liệu trò chơi:</b> thực hiện Đặt lại dữ liệu trong menu [Cài đặt] của Trò chơi hoặc gỡ cài đặt Trò chơi khỏi thiết bị sẽ xóa dữ liệu trò chơi đã lưu. Dữ liệu này không thể khôi phục.</li>
+  <li><b>Các yêu cầu xóa và truy cập khác:</b> nếu bạn muốn xóa hoặc được cung cấp dữ liệu đã thu thập, vui lòng liên hệ địa chỉ email tại Mục 8. Để thuận tiện cho việc xác minh yêu cầu, vui lòng gửi kèm ID hỗ trợ hiển thị trong menu [Cài đặt]. Nhà phát triển sẽ xử lý không chậm trễ sau khi xác minh yêu cầu; việc xóa hoàn toàn trong hệ thống của nhà cung cấp bên thứ ba có thể mất tới 30 ngày.</li>
 </ul>
 
 <h2>7. Quyền riêng tư của Trẻ em</h2>
@@ -173,7 +174,7 @@
 <h2>9. Thay đổi Chính sách Quyền riêng tư</h2>
 <p>Nếu Chính sách này được bổ sung, lược bỏ hoặc sửa đổi, các thay đổi sẽ được thông báo trên trang này ít nhất 7 ngày trước khi có hiệu lực.</p>
 
-<p class="meta">Ngày hiệu lực: 20 tháng 8 năm 2026</p>
+<p class="meta">Ngày hiệu lực: 21 tháng 8 năm 2026</p>
 
 <nav class="langbar" aria-label="Language">
   <a href="../../../balance-master/privacy/" data-setlang="ko" hreflang="ko">한국어</a> /

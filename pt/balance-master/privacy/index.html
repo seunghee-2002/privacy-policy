@@ -75,27 +75,28 @@
 
 <h2>1. Dados Coletados e Forma de Coleta</h2>
 <p>O Jogo não possui cadastro nem login, e nenhuma conta é criada. Não coletamos dados pessoais que identifiquem você diretamente, como nome, endereço de e-mail ou telefone. Seu progresso e suas configurações são armazenados apenas no seu dispositivo e nunca são transmitidos aos servidores do Desenvolvedor.</p>
-<p>No entanto, os SDKs de terceiros integrados ao Jogo coletam automaticamente os seguintes dados para fins de publicidade e análise estatística.</p>
+<p>No entanto, na primeira execução, o Jogo gera no próprio dispositivo um ID de suporte aleatório, e os SDKs de terceiros integrados ao Jogo coletam automaticamente os seguintes dados para fins de publicidade e análise estatística.</p>
 <div class="table-wrap">
 <table>
   <tr><th>Dados</th><th>Coletados por</th><th>Forma de coleta</th><th>Finalidade</th></tr>
   <tr><td>Identificador de publicidade (ID de publicidade do Android, IDFA do iOS)</td><td>LevelPlay e redes de anúncios mediadas</td><td>Automaticamente, ao solicitar um anúncio</td><td>Exibição de anúncios, limite de frequência, prevenção de fraudes</td></tr>
   <tr><td>Informações do dispositivo (modelo, versão do sistema operacional, plataforma, configurações de país e idioma, tipo de rede)</td><td>LevelPlay, GameAnalytics</td><td>Automaticamente, ao iniciar o Jogo e ao solicitar um anúncio</td><td>Exibição de anúncios e análise estatística</td></tr>
   <tr><td>Endereço IP e a localização aproximada (nível de país/região) dele inferida</td><td>LevelPlay e redes de anúncios mediadas</td><td>Automaticamente, ao solicitar um anúncio</td><td>Exibição de anúncios adequados à região, cumprimento legal, prevenção de fraudes</td></tr>
-  <tr><td>Identificador anônimo</td><td>GameAnalytics</td><td>Gerado automaticamente na primeira execução</td><td>Distinguir usuários para evitar contagem duplicada</td></tr>
-  <tr><td>Eventos de uso no Jogo (início, conclusão e falha de fases, moeda obtida e gasta, anúncios assistidos etc.)</td><td>GameAnalytics</td><td>Automaticamente, durante a partida</td><td>Análise estatística de uso e aprimoramento de dificuldade e conteúdo</td></tr>
-  <tr><td>Informações de diagnóstico (registros de erros e falhas)</td><td>GameAnalytics</td><td>Automaticamente, quando ocorre um erro</td><td>Identificar causas de erros e melhorar a estabilidade</td></tr>
+  <tr><td>ID de suporte (identificador anônimo aleatório)</td><td>Jogo (gerado no dispositivo), GameAnalytics</td><td>Gerado automaticamente no dispositivo na primeira execução</td><td>Distinguir usuários na análise estatística (evitar contagem duplicada); identificar os dados do jogo correspondentes quando você o inclui em uma solicitação de suporte</td></tr>
+  <tr><td>Registros de uso (data e hora de acesso, número de acessos, duração das sessões)</td><td>GameAnalytics</td><td>Automaticamente, ao iniciar e ao encerrar o Jogo</td><td>Análise estatística de uso, como retenção de usuários (se você volta a acessar 1 dia e 7 dias após a instalação)</td></tr>
+  <tr><td>Eventos de uso no Jogo (conclusão, falha e abandono de fases, uso de itens, anúncios assistidos, compras no aplicativo etc.)</td><td>GameAnalytics</td><td>Automaticamente, durante a partida</td><td>Análise estatística de uso e aprimoramento de dificuldade e conteúdo</td></tr>
   <tr><td>Informações do produto adquirido e recibo de compra</td><td>Faturamento do Google Play, faturamento da App Store</td><td>Automaticamente, ao realizar uma compra no aplicativo</td><td>Verificar a compra e entregar o produto</td></tr>
 </table>
 </div>
+<p>O ID de suporte não é vinculado a nenhum dado que possa identificar você, como nome ou e-mail, e pode ser consultado e copiado no menu [Configurações] do Jogo.</p>
 <p>O Jogo não acessa permissões sensíveis do dispositivo, como contatos, fotos, localização precisa (GPS) ou microfone.</p>
 
 <h2>2. Finalidades da Coleta e do Uso</h2>
 <ul>
   <li>Exibir anúncios intersticiais e premiados e limitar a frequência com que aparecem</li>
   <li>Medir o desempenho da publicidade e prevenir fraudes relacionadas a anúncios</li>
-  <li>Aprimorar o serviço por meio da análise estatística das partidas</li>
-  <li>Diagnosticar erros e melhorar a estabilidade do Jogo</li>
+  <li>Aprimorar o serviço por meio da análise estatística de uso (retenção de usuários, taxa de conclusão por fase etc.)</li>
+  <li>Identificar os dados do jogo correspondentes ao atender uma solicitação de suporte</li>
   <li>Verificar compras no aplicativo e entregar os produtos adquiridos</li>
 </ul>
 
@@ -120,7 +121,7 @@
   <tr><th>Política de privacidade</th><td><a href="https://gameanalytics.com/privacy/" target="_blank" rel="noopener">https://gameanalytics.com/privacy/</a></td></tr>
   <tr><th>Países de destino</th><td>União Europeia, Estados Unidos e outros países onde o fornecedor mantém servidores</td></tr>
   <tr><th>Momento e forma da transferência</th><td>Transmitidos pela rede durante a partida</td></tr>
-  <tr><th>Dados transferidos</th><td>Identificador anônimo, informações do dispositivo, eventos de uso no Jogo, informações de diagnóstico</td></tr>
+  <tr><th>Dados transferidos</th><td>ID de suporte, informações do dispositivo, registros de uso, eventos de uso no Jogo</td></tr>
   <tr><th>Finalidade</th><td>Análise estatística das partidas e aprimoramento do serviço</td></tr>
   <tr><th>Prazo de retenção</th><td>Conforme a política de privacidade do fornecedor</td></tr>
 </table>
@@ -148,15 +149,15 @@
 </ul>
 
 <h2>5. Prazo de Retenção</h2>
-<p>Seu progresso e suas configurações são armazenados apenas no seu dispositivo e são excluídos junto com o Jogo quando você o desinstala. O Desenvolvedor não mantém cópia separada desses dados.</p>
+<p>Seu progresso e suas configurações são armazenados apenas no seu dispositivo e são excluídos quando você executa Redefinir Dados no menu [Configurações] do Jogo ou desinstala o Jogo. Ao redefinir os dados, um novo ID de suporte é emitido. O Desenvolvedor não mantém cópia separada desses dados.</p>
 <p>Os dados coletados pelos SDKs de terceiros são retidos conforme as políticas de privacidade dos fornecedores indicados na Seção 3.</p>
 
 <h2 id="data-deletion">6. Seus Direitos e Como Exercê-los</h2>
 <ul>
   <li><b>Retirar o consentimento para anúncios personalizados:</b> você pode retirar o consentimento ou recusar o rastreamento pelos meios descritos na Seção 4.</li>
   <li><b>Redefinir ou excluir o identificador de publicidade:</b> você pode redefinir ou excluir seu ID de publicidade a qualquer momento nas configurações do dispositivo — no Android em [Configurações] &gt; [Google] &gt; [Anúncios], e no iOS em [Ajustes] &gt; [Privacidade e Segurança] &gt; [Rastreamento].</li>
-  <li><b>Excluir os dados do jogo:</b> desinstalar o Jogo apaga os dados armazenados no seu dispositivo. Esses dados não podem ser recuperados.</li>
-  <li><b>Outros pedidos de exclusão e acesso:</b> se desejar que dados já coletados sejam excluídos ou informados a você, entre em contato pelo e-mail indicado na Seção 8. O Desenvolvedor atenderá sem demora após verificar o pedido; a exclusão completa nos sistemas de um fornecedor terceiro pode levar até 30 dias.</li>
+  <li><b>Excluir os dados do jogo:</b> executar Redefinir Dados no menu [Configurações] do Jogo ou desinstalar o Jogo do dispositivo apaga os dados do jogo armazenados. Esses dados não podem ser recuperados.</li>
+  <li><b>Outros pedidos de exclusão e acesso:</b> se desejar que dados já coletados sejam excluídos ou informados a você, entre em contato pelo e-mail indicado na Seção 8. Para facilitar a verificação da sua identidade, inclua o ID de suporte exibido no menu [Configurações]. O Desenvolvedor atenderá sem demora após verificar o pedido; a exclusão completa nos sistemas de um fornecedor terceiro pode levar até 30 dias.</li>
 </ul>
 
 <h2>7. Privacidade de Crianças</h2>
@@ -173,7 +174,7 @@
 <h2>9. Alterações desta Política de Privacidade</h2>
 <p>Caso esta Política seja complementada, reduzida ou alterada, as mudanças serão anunciadas nesta página com pelo menos 7 dias de antecedência em relação à sua vigência.</p>
 
-<p class="meta">Data de vigência: 20 de agosto de 2026</p>
+<p class="meta">Data de vigência: 21 de agosto de 2026</p>
 
 <nav class="langbar" aria-label="Language">
   <a href="../../../balance-master/privacy/" data-setlang="ko" hreflang="ko">한국어</a> /

@@ -75,27 +75,28 @@
 
 <h2>1. Information We Collect and How It Is Collected</h2>
 <p>The Game has no sign-up or login, and no account is created. We do not collect personal information that directly identifies you, such as your name, email address or phone number. Your game progress and settings are stored only on your device and are never transmitted to the Developer's servers.</p>
-<p>However, third-party SDKs built into the Game automatically collect the following information for advertising and analytics purposes.</p>
+<p>However, the Game generates a random Support ID on your device when it is first launched, and third-party SDKs built into the Game automatically collect the following information for advertising and analytics purposes.</p>
 <div class="table-wrap">
 <table>
   <tr><th>Data</th><th>Collected by</th><th>How it is collected</th><th>Purpose</th></tr>
   <tr><td>Advertising identifier (Android Advertising ID, iOS IDFA)</td><td>LevelPlay and mediated ad networks</td><td>Automatically, when an ad is requested</td><td>Serving ads, frequency capping, fraud prevention</td></tr>
   <tr><td>Device information (device model, OS version, platform, country and language settings, network type)</td><td>LevelPlay, GameAnalytics</td><td>Automatically, when the Game starts and when an ad is requested</td><td>Serving ads and statistical analysis</td></tr>
   <tr><td>IP address and the approximate location (country/region level) inferred from it</td><td>LevelPlay and mediated ad networks</td><td>Automatically, when an ad is requested</td><td>Serving region-appropriate ads, legal compliance, fraud prevention</td></tr>
-  <tr><td>Anonymous identifier</td><td>GameAnalytics</td><td>Generated automatically on first launch</td><td>Distinguishing users so that statistics are not double-counted</td></tr>
-  <tr><td>In-game event data (level start, clear and fail, currency earned and spent, ads watched, etc.)</td><td>GameAnalytics</td><td>Automatically, while you play</td><td>Usage analytics and improvement of difficulty and content</td></tr>
-  <tr><td>Diagnostic information (error and crash reports)</td><td>GameAnalytics</td><td>Automatically, when an error occurs</td><td>Identifying causes of errors and improving stability</td></tr>
+  <tr><td>Support ID (random anonymous identifier)</td><td>The Game (generated on the device), GameAnalytics</td><td>Generated automatically on the device on first launch</td><td>Distinguishing users in analytics (avoiding duplicate counting); identifying the relevant game data when you include it in an enquiry</td></tr>
+  <tr><td>Usage records (access date and time, number of sessions, session length)</td><td>GameAnalytics</td><td>Automatically, when the Game starts and ends</td><td>Usage analytics such as user retention (whether you return 1 day and 7 days after installing)</td></tr>
+  <tr><td>In-game event data (level clear, fail and quit, item use, ads watched, in-app purchases, etc.)</td><td>GameAnalytics</td><td>Automatically, while you play</td><td>Usage analytics and improvement of difficulty and content</td></tr>
   <tr><td>Purchased product information and purchase receipt</td><td>Google Play Billing, App Store Billing</td><td>Automatically, when an in-app purchase is made</td><td>Verifying the purchase and delivering the product</td></tr>
 </table>
 </div>
+<p>The Support ID is not linked to any information that identifies you, such as your name or email address, and you can view and copy it in the Game's [Settings] menu.</p>
 <p>The Game does not access sensitive device permissions such as contacts, photos, precise location (GPS) or the microphone.</p>
 
 <h2>2. Purposes of Collection and Use</h2>
 <ul>
   <li>Serving interstitial and rewarded ads, and capping how often they are shown</li>
   <li>Measuring ad performance and preventing ad-related fraud</li>
-  <li>Improving the service through statistical analysis of gameplay</li>
-  <li>Diagnosing errors and improving the stability of the Game</li>
+  <li>Improving the service through statistical analysis of gameplay (such as user retention and per-level clear rates)</li>
+  <li>Identifying the relevant game data when handling an enquiry</li>
   <li>Verifying in-app purchases and delivering purchased products</li>
 </ul>
 
@@ -120,7 +121,7 @@
   <tr><th>Privacy policy</th><td><a href="https://gameanalytics.com/privacy/" target="_blank" rel="noopener">https://gameanalytics.com/privacy/</a></td></tr>
   <tr><th>Countries of transfer</th><td>The European Union, the United States and other countries where the provider operates servers</td></tr>
   <tr><th>When and how it is transferred</th><td>Transmitted over the network while you play</td></tr>
-  <tr><th>Data transferred</th><td>Anonymous identifier, device information, in-game event data, diagnostic information</td></tr>
+  <tr><th>Data transferred</th><td>Support ID, device information, usage records, in-game event data</td></tr>
   <tr><th>Purpose</th><td>Statistical analysis of gameplay and improvement of the service</td></tr>
   <tr><th>Retention period</th><td>As set out in the provider's own privacy policy</td></tr>
 </table>
@@ -148,15 +149,15 @@
 </ul>
 
 <h2>5. Retention Period</h2>
-<p>Your game progress and settings are stored only on your device and are deleted together with the Game when you uninstall it. The Developer does not keep a separate copy of this data.</p>
+<p>Your game progress and settings are stored only on your device and are deleted when you run Data Reset from the in-game [Settings] menu or uninstall the Game. Running Data Reset issues a new Support ID. The Developer does not keep a separate copy of this data.</p>
 <p>Information collected by third-party SDKs is retained in accordance with the privacy policies of the providers listed in Section 3.</p>
 
 <h2 id="data-deletion">6. Your Rights and How to Exercise Them</h2>
 <ul>
   <li><b>Withdrawing consent to personalised ads:</b> You can withdraw consent or refuse tracking using the methods described in Section 4.</li>
   <li><b>Resetting or deleting your advertising identifier:</b> You can reset or delete your advertising ID at any time in your device settings — on Android under [Settings] &gt; [Google] &gt; [Ads], and on iOS under [Settings] &gt; [Privacy &amp; Security] &gt; [Tracking].</li>
-  <li><b>Deleting game data:</b> Uninstalling the Game deletes the game data stored on your device. This data cannot be recovered.</li>
-  <li><b>Other deletion and access requests:</b> If you wish to have information that has already been collected deleted or disclosed to you, please contact the email address in Section 8. The Developer will act without undue delay after verifying the request; complete deletion within a third-party provider's systems may take up to 30 days.</li>
+  <li><b>Deleting game data:</b> Running Data Reset from the in-game [Settings] menu or uninstalling the Game from your device deletes the stored game data. This data cannot be recovered.</li>
+  <li><b>Other deletion and access requests:</b> If you wish to have information that has already been collected deleted or disclosed to you, please contact the email address in Section 8. To help us verify your request, please include the Support ID shown in the [Settings] menu. The Developer will act without undue delay after verifying the request; complete deletion within a third-party provider's systems may take up to 30 days.</li>
 </ul>
 
 <h2>7. Children's Privacy</h2>
@@ -173,7 +174,7 @@
 <h2>9. Changes to This Privacy Policy</h2>
 <p>If this Policy is supplemented, removed or amended, the changes will be announced on this page at least 7 days before they take effect.</p>
 
-<p class="meta">Effective date: 20 August 2026</p>
+<p class="meta">Effective date: 21 August 2026</p>
 
 <nav class="langbar" aria-label="Language">
   <a href="../../../balance-master/privacy/" data-setlang="ko" hreflang="ko">한국어</a> /
